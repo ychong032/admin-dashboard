@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 5fr;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    background-color: lightblue;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.primary-links ul,
+.secondary-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header {
+    background-color: pink;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-container input {
+    flex: 1;
+    border-radius: 8px;
+    border: none;
+}
+
+.links {
+    justify-self: center;
+}
+
+.buttons {
+    justify-self: center;
+}
+
+.content {
+    background-color: darkolivegreen;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 1rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem 1.5rem;
+}
+
+.card {
+    display: grid;
+    grid-template: 3fr 1fr / 1rem 1fr;
+    background-color: rgb(248, 248, 248);
+    border-radius: 12px;
+}
+
+h4, p {
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+.description {
+    padding: 1rem;
+}
+
+.colour-edge {
+    background-color: lightsalmon;
+    grid-row: span 2;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.icons {
+    justify-self: end;
+    align-self: center;
+    padding: 1rem;
+}
+
+.side-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.heading {
+    font-size: 1.2rem;
+    margin: 2rem 0 0.5rem 0;
+    font-weight: bold;
+}
+
+.announcements-container, .trending-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements, .trending {
+    flex: 1;
+    background-color: rgb(248, 248, 248);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.announcement + .announcement {
+    border-top: 1px solid rgba(164, 164, 164, 0.457);
+}
+
+.title {
+    font-weight: bold;
+}
+
+.message {
+    font-size: 1rem;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
