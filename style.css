@@ -1,19 +1,73 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Mukta', sans-serif;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: auto 5fr;
 }
 
 .sidebar {
     grid-row: 1 / -1;
-    background-color: lightblue;
+    background-color: #10b981;
+    row-gap: 1rem;
+    color: #fafafa;
     display: grid;
     grid-template-rows: auto auto 1fr;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.logo img {
+    height: 3rem;
+    transition: 0.7s;
+}
+
+.logo img:hover {
+    transform: rotateY(360deg);
+}
+
+li + li {
+    margin-top: 0.5rem;
+}
+
+.primary-links li,
+.secondary-links li,
+.log-out {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+}
+
+.primary-links li:hover,
+.secondary-links li:hover,
+.log-out:hover {
+    cursor: pointer;
+    background-color: rgba(174, 241, 174, 0.63);
+}
+
+.primary-links li img,
+.secondary-links li img,
+.log-out img {
+    height: 2rem;
 }
 
 .primary-links ul,
@@ -23,34 +77,116 @@ body {
 }
 
 .header {
-    background-color: pink;
+    background-color: #f9fafb;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.523);
+    padding: 1rem 2rem;
+}
+
+.profile {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+    justify-self: end;
+    align-items: center;
+}
+
+.bell, .github {
+    height: 2rem;
+}
+
+a {
+    display: flex;
+    align-items: center;
+}
+
+.github {
+    transition: 0.5s;
+}
+
+.bell:hover,
+.github:hover,
+.profile:hover {
+    cursor: pointer;
+}
+
+.github:hover {
+    transform: rotate(360deg);
+    height: 2.5rem;
+}
+
+button {
+    background-color: #10b981;
+    border-radius: 20px;
+    border: 0;
+    padding: 0.5rem 1.5rem;
+    color: #fafafa;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #18da9a;
 }
 
 .search-container {
     display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .search-container input {
     flex: 1;
-    border-radius: 8px;
+    border-radius: 20px;
     border: none;
+    background-color: #e4e4e7;
+    font-family: inherit;
+    outline: none;
+    padding: 0 1rem;
+    height: 2rem;
 }
 
-.links {
-    justify-self: center;
+.search-container input:focus {
+    border: 2px solid #10b981;
+}
+
+.search-container img {
+    height: 1.5rem;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.greeting .profile {
+    height: 4rem;
+    width: 4rem;
+}
+
+.user {
+    font-size: 1.5rem;
 }
 
 .buttons {
-    justify-self: center;
+    justify-self: end;
+    display: flex;
+    gap: 1rem;
 }
 
 .content {
-    background-color: darkolivegreen;
+    background-color: #e4e4e7;
     grid-column: 2;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -81,10 +217,27 @@ h4 {
 
 .description {
     padding: 1rem;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.description p,
+.message,
+.tag {
+    color: rgb(105, 105, 105);
+}
+
+.icons img {
+    height: 1.5rem;
+}
+
+.icons img:hover {
+    cursor: pointer;
+    background-color: lightgrey;
 }
 
 .colour-edge {
-    background-color: lightsalmon;
+    background-color: #940301;
     grid-row: span 2;
     border-radius: 12px 0px 0px 12px;
 }
@@ -93,6 +246,8 @@ h4 {
     justify-self: end;
     align-self: center;
     padding: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .side-content {
@@ -151,6 +306,12 @@ h4 {
 }
 
 .project {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project:hover {
+    cursor: pointer;
+    background-color: lightgrey;
 }
